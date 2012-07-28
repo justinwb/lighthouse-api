@@ -43,8 +43,14 @@ module Lighthouse
   #   project.tickets
   #
   class Project < Base
-    def tickets(options = {})
-      Ticket.find(:all, :params => options.update(:project_id => id))
+
+    def tickets(options = {:scope => :all})
+      scope = options.delete(:scope)
+      Ticket.find(scope, :params => options.update(:project_id => id))
+    end
+
+    def ticket(id)
+      tickets(:scope => id)
     end
 
     def messages(options = {})
@@ -58,7 +64,7 @@ module Lighthouse
     def bins(options = {})
       Bin.find(:all, :params => options.update(:project_id => id))
     end
-  
+
     def changesets(options = {})
       Changeset.find(:all, :params => options.update(:project_id => id))
     end
