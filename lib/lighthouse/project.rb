@@ -57,8 +57,13 @@ module Lighthouse
       Message.find(:all, :params => options.update(:project_id => id))
     end
 
-    def milestones(options = {})
-      Milestone.find(:all, :params => options.update(:project_id => id))
+    def milestone(id)
+      milestones(:scope => id)
+    end
+
+    def milestones(options = {:scope => :all})
+      scope = options.delete(:scope)
+      Milestone.find(scope, :params => options.update(:project_id => id))
     end
 
     def bins(options = {})

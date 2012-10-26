@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
   s.name = %q{lighthouse-api}
-  s.version = "2.0"
+  s.version = "2.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Rick Olson", "Justin Palmer"]
-  s.email = ["justin@entp.com"]
+  s.authors = ["Rick Olson", "Justin Palmer", "Justin Bingham"]
+  s.email = ["justin.bingham@janeirodigital.com"]
   s.extra_rdoc_files = ["LICENSE"]
   s.files = Dir.glob("lib/**/*") + %w(LICENSE README.md)
   s.has_rdoc = true
@@ -13,8 +13,8 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubyforge_project = 'lighthouse'
   s.rubygems_version = '1.2.0'
-  s.summary = %q{Ruby API wrapper for Lighthouse - http://lighthouseapp.com}
-  s.description = %q{Ruby API wrapper for Lighthouse - http://lighthouseapp.com}
+  s.summary = %q{Ruby API wrapper for Lighthouse (Modified by Janeiro Digital) - http://lighthouseapp.com}
+  s.description = %q{Ruby API wrapper for Lighthouse (Modified by Janeiro Digital) - http://lighthouseapp.com}
   s.test_files = []
 
   s.add_dependency(%q<activesupport>, [">= 3.0.0"])
